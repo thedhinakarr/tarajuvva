@@ -89,90 +89,90 @@ const ProductCard = ({ image, title, price, tag = "NEW", bgColor = "bg-pink-300"
 
 const IndexPage = () => {
   // Query for images
-  const data = useStaticQuery(graphql`
-    query {
-      logoImage: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 200
-            placeholder: BLURRED
-            formats: [AUTO, WEBP, AVIF]
-            quality: 100
-          )
-        }
-      }
-      patternImage: file(relativePath: { eq: "pattern.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 600
-            placeholder: BLURRED
-            aspectRatio: 0.8
-            formats: [AUTO, WEBP, AVIF]
-          )
-        }
-      }
-      patternbigImage: file(relativePath: { eq: "patternbig.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 600
-            placeholder: BLURRED
-            aspectRatio: 0.8
-            formats: [AUTO, WEBP, AVIF]
-          )
-        }
-      }
-      pattern1: file(relativePath: { eq: "pattern1.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 600
-            placeholder: BLURRED
-            aspectRatio: 0.8
-            formats: [AUTO, WEBP, AVIF]
-          )
-        }
-      }
-      pattern2: file(relativePath: { eq: "pattern2.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 600
-            placeholder: BLURRED
-            aspectRatio: 0.8
-            formats: [AUTO, WEBP, AVIF]
-          )
-        }
-      }
-      pattern3: file(relativePath: { eq: "pattern3.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 600
-            placeholder: BLURRED
-            aspectRatio: 0.8
-            formats: [AUTO, WEBP, AVIF]
-          )
-        }
-      }
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     logoImage: file(relativePath: { eq: "logo.png" }) {
+  //       childImageSharp {
+  //         gatsbyImageData(
+  //           width: 200
+  //           placeholder: BLURRED
+  //           formats: [AUTO, WEBP, AVIF]
+  //           quality: 100
+  //         )
+  //       }
+  //     }
+  //     patternImage: file(relativePath: { eq: "pattern.png" }) {
+  //       childImageSharp {
+  //         gatsbyImageData(
+  //           width: 600
+  //           placeholder: BLURRED
+  //           aspectRatio: 0.8
+  //           formats: [AUTO, WEBP, AVIF]
+  //         )
+  //       }
+  //     }
+  //     patternbigImage: file(relativePath: { eq: "patternbig.png" }) {
+  //       childImageSharp {
+  //         gatsbyImageData(
+  //           width: 600
+  //           placeholder: BLURRED
+  //           aspectRatio: 0.8
+  //           formats: [AUTO, WEBP, AVIF]
+  //         )
+  //       }
+  //     }
+  //     pattern1: file(relativePath: { eq: "pattern1.png" }) {
+  //       childImageSharp {
+  //         gatsbyImageData(
+  //           width: 600
+  //           placeholder: BLURRED
+  //           aspectRatio: 0.8
+  //           formats: [AUTO, WEBP, AVIF]
+  //         )
+  //       }
+  //     }
+  //     pattern2: file(relativePath: { eq: "pattern2.png" }) {
+  //       childImageSharp {
+  //         gatsbyImageData(
+  //           width: 600
+  //           placeholder: BLURRED
+  //           aspectRatio: 0.8
+  //           formats: [AUTO, WEBP, AVIF]
+  //         )
+  //       }
+  //     }
+  //     pattern3: file(relativePath: { eq: "pattern3.png" }) {
+  //       childImageSharp {
+  //         gatsbyImageData(
+  //           width: 600
+  //           placeholder: BLURRED
+  //           aspectRatio: 0.8
+  //           formats: [AUTO, WEBP, AVIF]
+  //         )
+  //       }
+  //     }
 
-      ourstory: file(relativePath: { eq: "ourstory.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 600
-            placeholder: BLURRED
-            aspectRatio: 0.8
-            formats: [AUTO, WEBP, AVIF]
-          )
-        }
-      }
-    }
-  `)
+  //     ourstory: file(relativePath: { eq: "ourstory.png" }) {
+  //       childImageSharp {
+  //         gatsbyImageData(
+  //           width: 600
+  //           placeholder: BLURRED
+  //           aspectRatio: 0.8
+  //           formats: [AUTO, WEBP, AVIF]
+  //         )
+  //       }
+  //     }
+  //   }
+  // `)
 
 
-  const logoImage = getImage(data.logoImage) || null
-  const patternImage = getImage(data.patternImage) || null
-  const patternbigImage = getImage(data.patternbigImage) || null
-  const ourstoryImage = getImage(data.ourstory) || null
-  const pattern1 = getImage(data.pattern1) || null
-  const pattern2 = getImage(data.pattern2) || null
-  const pattern3 = getImage(data.pattern3) || null
+  // const logoImage = getImage(data.logoImage) || null
+  // const patternImage = getImage(data.patternImage) || null
+  // const patternbigImage = getImage(data.patternbigImage) || null
+  // const ourstoryImage = getImage(data.ourstory) || null
+  // const pattern1 = getImage(data.pattern1) || null
+  // const pattern2 = getImage(data.pattern2) || null
+  // const pattern3 = getImage(data.pattern3) || null
 
   return (
     <main className="overflow-x-hidden">
@@ -208,11 +208,11 @@ const IndexPage = () => {
             {/* Hero Image with Border */}
             <div className="border-4 border-black shadow-neo-lg bg-white overflow-hidden relative">
               <div className="relative">
-                <GatsbyImage
+                {/* <GatsbyImage
                   image={patternbigImage}
                   alt="Tarrajuwa Hero"
                   className="w-full transition-transform duration-700 hover:scale-105"
-                />
+                /> */}
 
                 {/* Centered Text Overlay */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
@@ -255,7 +255,7 @@ const IndexPage = () => {
             Pattern Collection
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {[
               { image: pattern1, title: "UTILITY CARGO PANTS", price: "$129", color: "bg-pink-900" },
               { image: pattern2, title: "OVERSIZED JACKET", price: "$189", color: "bg-purple-900" },
@@ -276,7 +276,7 @@ const IndexPage = () => {
                 />
               </motion.div>
             ))}
-          </div>
+          </div> */}
 
           <div className="mt-16 text-center">
             <motion.div
@@ -330,11 +330,11 @@ const IndexPage = () => {
               className="relative"
             >
               <div className="border-4 border-black shadow-neo bg-purple-600 transform rotate-6 aspect-square flex items-center justify-center p-10">
-                <GatsbyImage
+                {/* <GatsbyImage
                   image={ourstoryImage}
                   alt="Tarrajuwa Logo"
                   className="w-dull"
-                />
+                /> */}
               </div>
               <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-pink-300 border-4 border-black transform -rotate-12"></div>
             </motion.div>
