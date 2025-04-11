@@ -166,9 +166,9 @@ const IndexPage = () => {
   `)
 
 
-  const logoImage = getImage(data.logoImage)
-  const patternImage = getImage(data.patternImage)
-  const patternbigImage = getImage(data.patternbigImage)
+  const logoImage = getImage(data.logoImage) || null
+  const patternImage = getImage(data.patternImage) || null
+  const patternbigImage = getImage(data.patternbigImage) || null
   const ourstoryImage = getImage(data.ourstory) || null
   const pattern1 = getImage(data.pattern1) || null
   const pattern2 = getImage(data.pattern2) || null
