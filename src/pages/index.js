@@ -91,7 +91,7 @@ const IndexPage = () => {
   // Query for images
   const data = useStaticQuery(graphql`
     query {
-      logoImage: file(relativePath: { eq: "logo.jpeg" }) {
+      logoImage: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 200
@@ -101,7 +101,7 @@ const IndexPage = () => {
           )
         }
       }
-      patternImage: file(relativePath: { eq: "pattern.jpeg" }) {
+      patternImage: file(relativePath: { eq: "pattern.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 600
@@ -111,7 +111,7 @@ const IndexPage = () => {
           )
         }
       }
-      patternbigImage: file(relativePath: { eq: "patternbig.jpeg" }) {
+      patternbigImage: file(relativePath: { eq: "patternbig.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 600
@@ -121,7 +121,7 @@ const IndexPage = () => {
           )
         }
       }
-      pattern1: file(relativePath: { eq: "pattern1.jpeg" }) {
+      pattern1: file(relativePath: { eq: "pattern1.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 600
@@ -131,7 +131,7 @@ const IndexPage = () => {
           )
         }
       }
-      pattern2: file(relativePath: { eq: "pattern2.jpeg" }) {
+      pattern2: file(relativePath: { eq: "pattern2.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 600
@@ -141,7 +141,7 @@ const IndexPage = () => {
           )
         }
       }
-      pattern3: file(relativePath: { eq: "pattern3.jpeg" }) {
+      pattern3: file(relativePath: { eq: "pattern3.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 600
@@ -152,7 +152,7 @@ const IndexPage = () => {
         }
       }
 
-      ourstory: file(relativePath: { eq: "ourstory.jpeg" }) {
+      ourstory: file(relativePath: { eq: "ourstory.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 600
