@@ -91,16 +91,6 @@ const IndexPage = () => {
   // Query for images
   const data = useStaticQuery(graphql`
     query {
-      heroImage: file(relativePath: { eq: "hero.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 2000
-            placeholder: BLURRED
-            formats: [AUTO, WEBP, AVIF]
-            quality: 90
-          )
-        }
-      }
       logoImage: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           gatsbyImageData(
@@ -175,7 +165,7 @@ const IndexPage = () => {
     }
   `)
 
-  const heroImage = getImage(data.heroImage)
+
   const logoImage = getImage(data.logoImage)
   const patternImage = getImage(data.patternImage)
   const patternbigImage = getImage(data.patternbigImage)
