@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { Helmet } from "react-helmet"
 
 const Header = ({ logoImage }) => {
