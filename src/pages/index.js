@@ -59,22 +59,14 @@ const ProductCard = ({ image, title, price, tag = "NEW", bgColor = "bg-pink-300"
   return (
     <div className="border-4 border-black shadow-neo bg-white transform -rotate-2 transition-all duration-300 hover:-translate-y-2 hover:shadow-neo-lg">
       <div className="relative border-b-4 border-black overflow-hidden">
-        {image ? (
-          <GatsbyImage
-            image={image}
-            alt={title}
-            className="w-full transition-transform duration-500 group-hover:scale-110"
-          />
-        ) : (
-          <div className={`${bgColor} aspect-[4/5] flex items-center justify-center text-4xl font-bold text-white`}>
-            TARRAJUWA
-          </div>
-        )}
-        {tag && (
-          <div className="absolute top-3 right-3 bg-blue-600 text-white py-1 px-3 font-bold border-2 border-black transform rotate-3 z-10">
-            {tag}
-          </div>
-        )}
+        <div className={`${bgColor} aspect-[4/5] flex items-center justify-center text-4xl font-bold text-white`}>
+          TARRAJUWA
+        </div>
+        tag && (
+        <div className="absolute top-3 right-3 bg-blue-600 text-white py-1 px-3 font-bold border-2 border-black transform rotate-3 z-10">
+          {tag}
+        </div>
+        )
       </div>
       <div className="p-5">
         <h3 className="text-2xl font-bold text-black mb-1">{title}</h3>
